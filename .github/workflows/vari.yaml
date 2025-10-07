@@ -17,7 +17,7 @@ jobs:
   steps:
     - uses: actions/checkout@v4
     - name: Run a one-line script
-      run: echo "hello, world $Greeting"
+      run: echo "$Greeting, world"
   
   
 
