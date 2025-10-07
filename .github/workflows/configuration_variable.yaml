@@ -1,0 +1,20 @@
+name: Its an example for configuration variable
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-lates
+    
+  steps:
+    - uses: actions/checkout@v4
+    - name: Run a one-line script
+      run: echo "my project id is ${{vars.project_id}}"
+     
+    
