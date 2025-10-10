@@ -1,19 +1,19 @@
 name: Example for configuration variables
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
 
 env:
   cloud: AwsCloud
 
 jobs:
-  greeting_job: 
+  greeting_job:
     runs-on: ubuntu-latest
     env:
       greeting: Hello
 
     steps:
-      - name: "Say its a monday"
-        run: echo "$greeting, its $firstname using the $cloud with ${{vars.PROJECT_ID}}"
+      - name: "Say it's a Monday"
+        run: echo "$greeting, it's $firstname using the $cloud with ${{ vars.PROJECT_ID }}"
         env:
           firstname: sumithra
