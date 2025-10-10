@@ -1,0 +1,19 @@
+name: Example for workflow varibles
+
+on: workflow_dispatch
+
+env:
+  cloud: AwsCloud
+
+jobs:
+  greeting_job:
+    runs_on: ubuntu-latest
+    env: 
+      greeting: hello
+    steps:
+      - name: "say hello mona its monday"
+        run: echo "$greeting,$firstname is using $cloud"
+        env:
+          firstname: sumithra
+    
+  
